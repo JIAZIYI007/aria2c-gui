@@ -4,12 +4,14 @@ import os
 import shutil
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QProcess, QTimer, QSettings, QStandardPaths
+from PyQt5.QtGui import QIcon
 
 class Aria2DirectGUI(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Aria2 直接下载管理器")
-        self.resize(900, 550)
+        self.resize(1024, 768)
+        self.setWindowIcon(QIcon("aria2cgui.png"))
         self.process = None
         self.current_download_file = ""  # 记录当前下载的文件名（用于提示）
         
